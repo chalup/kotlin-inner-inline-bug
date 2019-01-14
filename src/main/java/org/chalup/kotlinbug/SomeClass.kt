@@ -1,4 +1,4 @@
-package yapf.chalup.org.yetanotherproguardfail
+package org.chalup.kotlinbug
 
 interface Printer {
     fun print(message: String)
