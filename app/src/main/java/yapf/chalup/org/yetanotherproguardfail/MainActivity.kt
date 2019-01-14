@@ -15,6 +15,10 @@ class MainActivity : Activity() {
             }
         }
 
-        SomeClass(printer, LogLevel.DEBUG).builder(Random().nextInt().takeIf { it % 2 == 0 }).print()
+        val value = Random().nextInt()
+        with (SomeClass(printer, LogLevel.DEBUG)) {
+            builder(value).print()
+            builder(value + 1).print()
+        }
     }
 }

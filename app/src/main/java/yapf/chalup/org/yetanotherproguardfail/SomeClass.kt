@@ -22,7 +22,7 @@ class SomeClass(
     private val printer: Printer,
     private val defaultLogLevel: LogLevel
 ) {
-    fun builder(value: Int?) = SomeBuilder(value)
+    fun builder(value: Int) = SomeBuilder(value.takeIf { it % 2 == 0 })
 
     inner class SomeBuilder
     internal constructor(value: Int? = null) {
